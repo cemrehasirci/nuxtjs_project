@@ -3,7 +3,6 @@
   <div class="homepage">
 
     <div class="container">
-
       <div class="side_menu">
         <Side_menu />
       </div>
@@ -11,11 +10,17 @@
       <div class="slider">
         <Slider />
       </div>
-
     </div>
 
-    <div class="son_eklenenler">
-      <Son_eklenenler />
+    <div class="container2">
+      <div class="son_eklenenler">
+        <Son_eklenenler />
+      </div>
+
+      <div class="son_yazilar">
+        <Son_yazilar />
+      </div>
+
     </div>
 
   </div>
@@ -28,6 +33,7 @@
   import Side_menu from '~/components/Side_menu.vue';
   import Slider from '../components/Slider.vue';
   import Son_eklenenler from '../components/Son_eklenenler.vue';
+
 </script>
 
 <style>
@@ -50,6 +56,9 @@
     margin-left: 30px;
   }
 
+  .container2 {
+    display: flex;
+  }
   .son_eklenenler {
     width: 100%;
   }

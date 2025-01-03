@@ -33,11 +33,11 @@
   import { defineComponent } from 'vue';
   
   export default defineComponent({
-    name: 'ComponentThree',
+    name: 'Side_menu',
   });
-  </script>
-  
-  <style scoped>
+</script>
+
+<style scoped>
   .menu-container {
     background-color: #faf7ec;
     padding: 20px;
@@ -95,5 +95,5 @@
   .sub-menu > li a:hover {
     text-decoration: underline;
   }
-  </style>
+</style>
   

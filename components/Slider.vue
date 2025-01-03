@@ -43,7 +43,7 @@
     data() {
         return {
             images: [
-                "/assets/images/slider/image1.jpg",
+                '/slider_img/image2.jpg',
                 '/assets/images/slider/image2.jpg',
                 '/assets/images/slider/image3.jpg',
                 '/assets/images/slider/image4.jpg',
