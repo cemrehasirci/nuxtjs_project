@@ -17,7 +17,7 @@
                 <a href="#"><img src="/assets/images/footer/App-Store.png" alt="Apple Logo" /></a>
               </div>
               <div class="app-link">
-                <a href="#"><img src="/assets/images/footer/Google_Play.png" alt="Google Play Logo" /></a>
+                <a href="#"><img src="/assets/images/footer/google_Play.png" alt="Google Play Logo" /></a>
               </div>
               <div class="app-link">
                 <a href="#"><img src="/assets/images/footer/App_Gallery.png" alt="Huawei Logo" /></a>
@@ -51,7 +51,7 @@
             <div class="social-links">
                 <span>🌍 EN</span>    
                 <div class="social-icons">
-                    <a href="#"><img src="/assets/images/footer/x-logo.png" alt="Twitter Logo" /></a>
+                    <a href="#"><img src="/assets/images/footer/x.png" alt="Twitter Logo" /></a>
                     <a href="#"><img src="/assets/images/footer/insta.png" alt="Instagram Logo" /></a>
                     <a href="#"><img src="/assets/images/footer/face.png" alt="Facebook Logo" /></a>
                 </div>
@@ -79,6 +79,7 @@
   
   <style scoped>
   .footer {
+    margin-top: 30px;
     background-color: #981515;
     color: white;
     padding: 40px 0;
@@ -134,7 +135,6 @@
     text-align: center;
   }
   .social-links {
-    
     margin-top: 20px;
   }
   .social-icons {

@@ -21,6 +21,7 @@
   </div>
 
   <div class="links">
+
     <a href="#">Yardım</a>
 
     <div class="dropdown">
@@ -34,6 +35,7 @@
             <a href="#">Sanat</a>
           </div>
         </div>
+
         <div class="dropdown-item">
           <span>Dergiler</span>
           <div class="sub-menu">
@@ -42,6 +44,7 @@
             <a href="#">Sağlık</a>
           </div>
         </div>
+
         <div class="dropdown-item">
           <span>Koleksiyon & Efemera</span>
           <div class="sub-menu">
@@ -57,7 +60,7 @@
     <a href="#"><i class="cart-icon">🛒</i> Sepetim (0)</a>
   </div>
 
-      <div class="red-bar">
+  <div class="red-bar">
       <a href="#">Detaylı Ara</a>
       <span class="separator"></span>
       <a href="#">Kitaplar</a>
@@ -69,7 +72,7 @@
       <a href="#">Blog</a>
       <span class="separator"></span>
       <a href="#">Kitap Satıcıları</a>
-    </div>
+  </div>
 
     
 </template>
@@ -171,8 +174,8 @@
 }
 
 .separator {
-  margin: 0 10px;
-  border-right: 1px solid white;
-  height: 20px;
+  margin: 0 50px;
+  border-right: 2px solid white;
+  height: 30px;
 }
 </style>
