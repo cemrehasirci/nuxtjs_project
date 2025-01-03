@@ -7,7 +7,7 @@
   <div class="top-bar">
   
     <div class="logo">
-      <a href="#">
+      <a href="/">
         <img src="/assets/images/logo.svg" alt="Logo" />
       </a>
     </div>
@@ -63,14 +63,19 @@
   <div class="red-bar">
       <a href="#">Detaylı Ara</a>
       <span class="separator"></span>
+
       <a href="#">Kitaplar</a>
       <span class="separator"></span>
+
       <a href="#">Dergiler</a>
       <span class="separator"></span>
+
       <a href="#">Sanat & Koleksiyon</a>
       <span class="separator"></span>
-      <a href="#">Blog</a>
+
+      <router-link to="/blog">Blog</router-link>
       <span class="separator"></span>
+
       <a href="#">Kitap Satıcıları</a>
   </div>
 

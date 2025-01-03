@@ -2,7 +2,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-brand">
-          <h2>NadirKitap</h2>
+          <!--<img src="/assets/images/footer/nadir_logo.svg" alt="Logo" />-->
+          <h2>Nadir Kitap</h2>
         </div>
         <div class="footer-columns">
           <div class="footer-column">

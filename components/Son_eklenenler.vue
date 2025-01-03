@@ -62,7 +62,7 @@
     background-color: #faf7ec;
     padding: 10px;
     border-radius: 8px;
-    max-width: 100%;
+    /*max-width: 100%;*/
     justify-content: center;
   }
   

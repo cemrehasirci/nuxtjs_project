@@ -5,10 +5,11 @@
         <div class="baslik"><h3>✏️ Blog'dan Son Yazılar</h3></div>
         <div class="box">
           <ul>
+            <!-- Blogs.vue verileri buradan geliyor -->
             <li v-for="(blog, index) in latestBlogs" :key="index">
-              <a href="#"><h4>{{ blog.title }}</h4></a>
-              <small><i>{{ blog.date }}</i></small>
-            </li>
+            <a :href="blog.link"><h4>{{ blog.title }}</h4></a>
+            <small><i>{{ blog.date }}</i></small>
+          </li>
           </ul>
         </div>
       </div>
@@ -64,29 +65,15 @@
     
     </style>
     
-    <script setup>
+<script setup>
+    import { ref, onMounted } from 'vue';
+    import { blogs } from '@/components/Blogs_container.vue';
     
-    import { onMounted } from 'vue';
     const latestBlogs = ref([]);
     
+    // Dinamik olarak blog verilerini al
     onMounted(() => {
-      if (process.client) {
-        const blogCards = document.querySelectorAll('.blog-card');
-        const blogs = Array.from(blogCards).map((card) => {
-          const title = card.querySelector('h2')?.innerText.trim() || 'Başlık bulunamadı'; 
-          const date = card.querySelector('.date')?.innerText.trim() || 'Tarih bulunamadı';
-          return { title, date };
-        });
-    
-        latestBlogs.value = blogs.slice(0, 4);
-      }
+      latestBlogs.value = blogs.slice(0, 4); // Son 4
     });
-    
-    </script>
-    
-    <script>
-      export default {
-        name: 'ComponentSeven',
-      };
-    </script>
+</script>
       

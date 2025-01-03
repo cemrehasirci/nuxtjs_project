@@ -58,9 +58,11 @@
 
   .container2 {
     display: flex;
+    height: 900px;
   }
   .son_eklenenler {
     width: 100%;
+    height: 100%;
   }
 
 </style>
