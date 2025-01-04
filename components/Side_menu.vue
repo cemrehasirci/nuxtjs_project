@@ -23,13 +23,13 @@
             <li><a href="#">Diğer & Çeşitli</a></li>
           </ul>
         </li>
-        <li><a href="#">Dergiler</a></li>
+        <li><router-link to="/dergi">Dergiler</router-link></li>
         <li><a href="#">Sanat&Koleksiyon</a></li>
       </ul>
     </div>
   </template>
   
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent } from 'vue';
   
   export default defineComponent({

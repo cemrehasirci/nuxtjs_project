@@ -2,7 +2,7 @@
 
   <div class="homepage">
 
-    <div class="container">
+    <div class="index_container">
       <div class="side_menu">
         <Side_menu />
       </div>
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="container2">
+    <div class="index_container2">
       <div class="son_eklenenler">
         <Son_eklenenler />
       </div>
@@ -38,13 +38,10 @@
 
 <style>
 
-  .homepage {
-    margin: 20px 150px;
-  }
-
-  .container {
+  .index_container {
     display: flex;
     margin-bottom: 50px;
+    max-width: 100%;
   }
 
   .side_menu {
@@ -56,7 +53,7 @@
     margin-left: 30px;
   }
 
-  .container2 {
+  .index_container2 {
     display: flex;
     height: 900px;
   }

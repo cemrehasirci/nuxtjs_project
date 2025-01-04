@@ -18,7 +18,7 @@
   
       <div class="dergi-listesi">
         <div class="dergi-box">
-          <img src="/images/dergiler/gelenek.jpg" alt="Gelenek Kitap Dizisi" class="dergi-img" />
+          <img src="~/assets/images/dergiler/gelenek.jpg" alt="Gelenek Kitap Dizisi" class="dergi-img" />
           <div class="bilgiler">
             <h3 class="baslik">Gelenek Kitap Dizisi sayı 19 Temmuz 1988</h3>
             <p class="satici">Satıcı: <span class="red"> Sahaf Standı</span></p>
@@ -34,7 +34,7 @@
         </div>
   
         <div class="dergi-box">
-          <img src="/images/dergiler/bonhams.jpg" alt="Bonhams Magazine Winter 2005" class="dergi-img" />
+          <img src="~/assets/images/dergiler/bonhams.jpg" alt="Bonhams Magazine Winter 2005" class="dergi-img" />
           <div class="bilgiler">
             <h3 class="baslik">Bonhams Magazine Winter 2005 john lennon art of sone cethedra</h3>
             <p class="satici">Satıcı: <span class="red">Sahaf Standı</span></p>
@@ -56,11 +56,6 @@
   
   <style>
   
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
   .search-bar {
     display: flex;
     justify-content: space-between;
@@ -165,7 +160,7 @@
   
   <script>
     export default {
-      name: 'ComponentTen',
+      name: 'Dergiler_container',
     };
   </script>
     

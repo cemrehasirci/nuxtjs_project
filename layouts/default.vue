@@ -25,6 +25,16 @@
 </script>
 
 <style>
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+  
+  main {
+    margin: 20px 150px;
+  }
+/*
   .page-fade-enter-active, .page-fade-leave-active {
     transition: opacity 0.5s ease;
   }
@@ -32,6 +42,6 @@
   .page-fade-enter, .page-fade-leave-to {
     opacity: 0;
   }
-
+*/
 </style>
   

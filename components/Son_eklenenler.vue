@@ -4,7 +4,7 @@
         <h1>📚 Son Eklenenler</h1>
       </div>
 
-    <div class="container">
+    <div class="son_eklenen_container">
         <div class="book-grid">
             <div v-for="book in books" :key="book.id" class="book-item">
                 <img :src="book.image" alt="Book Image" class="book-image" />
@@ -58,11 +58,11 @@
   </script>
   
   <style scoped>
-  .container {
+  .son_eklenen_container {
     background-color: #faf7ec;
-    padding: 10px;
+    padding: 30px;
     border-radius: 8px;
-    /*max-width: 100%;*/
+    max-width: 100%;
     justify-content: center;
   }
   

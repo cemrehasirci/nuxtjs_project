@@ -1,11 +1,10 @@
 <template>
 
-    <div class="seven">
+    <div class="son_yazilar">
       <div class="son-bloglar">
         <div class="baslik"><h3>✏️ Blog'dan Son Yazılar</h3></div>
         <div class="box">
           <ul>
-            <!-- Blogs.vue verileri buradan geliyor -->
             <li v-for="(blog, index) in latestBlogs" :key="index">
             <a :href="blog.link"><h4>{{ blog.title }}</h4></a>
             <small><i>{{ blog.date }}</i></small>
@@ -36,31 +35,30 @@
     </template>
     
     <style>
-      .seven { 
-        width: 280px;
+      .son_yazilar { 
         padding: 10px;
       }
       .box {
         border: 1px solid #eee4cd;
         margin: 5px 10px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
       }
-      .seven a {
+      .son_yazilar a {
         text-decoration: none;
         color: #333;
       }
-      .seven h3 {
+      .son_yazilar h3 {
         color: #931818;
       }
-      .seven h4 {
+      .son_yazilar h4 {
         font-weight: 400;
         margin-bottom: 5px;
       }
-      .seven li {
+      .son_yazilar li {
         text-indent: 20px;
         margin: 5px;
         list-style-type: none;
-        margin-left: -10px;
-        margin-right: 20px;
       }
     
     </style>

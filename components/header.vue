@@ -1,7 +1,9 @@
 <template>
 
   <header class="header">
-    Aradığınız Kitabın Adresi 📚 İndirimler ve Kampanyalar 👍 18 Yıldır Güvenle
+    <a href="#">
+      Aradığınız Kitabın Adresi 📚 İndirimler ve Kampanyalar 👍 18 Yıldır Güvenle
+    </a>
   </header>
       
   <div class="top-bar">
@@ -11,54 +13,55 @@
         <img src="/assets/images/logo.svg" alt="Logo" />
       </a>
     </div>
-  </div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Satışta olan 11.135.107 kitap içinde" />
-    <button>
-      <i class="search-icon">🔍</i>
-    </button>
-  </div>
-
-  <div class="links">
-
-    <a href="#">Yardım</a>
-
-    <div class="dropdown">
-      <a href="#">Kategoriler</a>
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-          <span>Kitaplar</span>
-          <div class="sub-menu">
-            <a href="#">Roman</a>
-            <a href="#">Bilim</a>
-            <a href="#">Sanat</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Satışta olan 11.135.107 kitap içinde" />
+      <button>
+        <i class="search-icon">🔍</i>
+      </button>
+    </div>
+  
+    <div class="links">
+  
+      <a href="#" style="color: #981515;" >Yardım</a>
+  
+      <div class="dropdown">
+        <a href="#">Kategoriler</a>
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <span>Kitaplar</span>
+            <div class="sub-menu">
+              <a href="#">Roman</a>
+              <a href="#">Bilim</a>
+              <a href="#">Sanat</a>
+            </div>
           </div>
-        </div>
-
-        <div class="dropdown-item">
-          <span>Dergiler</span>
-          <div class="sub-menu">
-            <a href="#">Moda</a>
-            <a href="#">Teknoloji</a>
-            <a href="#">Sağlık</a>
+  
+          <div class="dropdown-item">
+            <span>Dergiler</span>
+            <div class="sub-menu">
+              <a href="#">Moda</a>
+              <a href="#">Teknoloji</a>
+              <a href="#">Sağlık</a>
+            </div>
           </div>
-        </div>
-
-        <div class="dropdown-item">
-          <span>Koleksiyon & Efemera</span>
-          <div class="sub-menu">
-            <a href="#">Kartpostallar</a>
-            <a href="#">Pul</a>
-            <a href="#">Antika</a>
+  
+          <div class="dropdown-item">
+            <span>Koleksiyon & Efemera</span>
+            <div class="sub-menu">
+              <a href="#">Kartpostallar</a>
+              <a href="#">Pul</a>
+              <a href="#">Antika</a>
+            </div>
           </div>
         </div>
       </div>
+  
+      <a href="#" style="color: #981515;" >👤 Bana Özel</a>
+      <a href="#" style="color: #981515;" >🛒 Sepetim (0)</a>
     </div>
-
-    <a href="#"><i class="profile-icon">👤</i> Bana Özel</a>
-    <a href="#"><i class="cart-icon">🛒</i> Sepetim (0)</a>
   </div>
+
 
   <div class="red-bar">
       <a href="#">Detaylı Ara</a>
@@ -67,7 +70,7 @@
       <a href="#">Kitaplar</a>
       <span class="separator"></span>
 
-      <a href="#">Dergiler</a>
+      <router-link to="/dergi">Dergiler</router-link>
       <span class="separator"></span>
 
       <a href="#">Sanat & Koleksiyon</a>
@@ -83,12 +86,19 @@
 </template>
 
 <style scoped>
+
+
 .header {
   background-color: #c9a046;
   color: #fff; 
   text-align: center;
   padding: 10px 0; 
-  font-size: 25px; 
+  font-size: 25px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .top-bar {
@@ -101,7 +111,7 @@
 }
 
 .logo img {
-  margin-right: 30px;
+  margin-left: 40px;
   width: 120px;
 }
 
@@ -147,7 +157,7 @@
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 99;
 }
 
 .dropdown:hover .dropdown-content {
