@@ -1,41 +1,53 @@
 <template>
-
   <div class="dergi_page">
     
-    <div class="side_menu_dergi">
-      <Side_menu_dergi />
+    <div class="blog_side">
+      <div class="side_menu_dergi">
+        <Side_menu_dergi />
+      </div>
+
+      <div class="blog_rehber">
+        <Islem_rehberi />
+      </div>
+
     </div>
 
-    <div class="Dergiler_container">
+
+    <div class="dergiler_container">
       <Dergiler_container />
     </div>
 
 
 
   </div>
-
 </template>
 
 <script>
   import Side_menu_dergi from '~/components/Side_menu_dergi.vue';
   import Dergiler_container from '../components/Dergiler_container.vue';
-  import Son_eklenenler from '../components/Son_eklenenler.vue';
+  import Islem_rehberi from '/components/Islem_rehberi.vue';
 
 </script>
 
 <style>
 
-  
-
   .dergi_page {
     display: flex;
   }
 
-  .side_menu_dergi {
+  .blog_side {
     flex: 1;
     max-width: 25%;
   }
 
+  .side_menu_dergi {
+    margin-bottom: 20px;
+  }
+
+  .dergiler_container {
+    width: 100%;
+    padding: 10px 20px;
+  }
 
 </style>
 

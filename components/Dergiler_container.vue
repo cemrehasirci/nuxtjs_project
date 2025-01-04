@@ -1,60 +1,79 @@
 <template>
-    <div class="ten">
-      <div class="search-bar">
-        <input type="text" placeholder="Dergiler kategorisinde ara" class="search-input"/>
-        <button class="search-button">ARA</button>
-      </div>
+
+  <div class="dergi_con">
+    <div class="search-bar">
+      <input type="text" placeholder="Dergiler kategorisinde ara" class="search-input"/>
+      <button class="search-button">ARA</button>
+    </div>
   
-      <div class="filters">
-        <span>Dergiler kategorisindeki dergiler (Son 48 saat)</span>
-        <div class="siralama">
-          <h4>Sıralama Şekli</h4>
-          <div class="seciniz">
-            Seçiniz
-            <button>Yeni Gelenler</button>
-          </div>
-        </div>
-      </div>
-  
-      <div class="dergi-listesi">
-        <div class="dergi-box">
-          <img src="~/assets/images/dergiler/gelenek.jpg" alt="Gelenek Kitap Dizisi" class="dergi-img" />
-          <div class="bilgiler">
-            <h3 class="baslik">Gelenek Kitap Dizisi sayı 19 Temmuz 1988</h3>
-            <p class="satici">Satıcı: <span class="red"> Sahaf Standı</span></p>
-            <p class="yayinevi">Yayınevi: Gelenek Yayınları, 1988</p>
-            <p class="kondisyon">
-              Kondisyon: <span class="stars">★★★★  Çok İyi</span>
-            </p>
-          </div>
-          <div class="fiyat-kismi">
-            <span class="fiyat">62,00 TL</span>
-            <button class="sepete-ekle">Sepete Ekle</button>
-          </div>
-        </div>
-  
-        <div class="dergi-box">
-          <img src="~/assets/images/dergiler/bonhams.jpg" alt="Bonhams Magazine Winter 2005" class="dergi-img" />
-          <div class="bilgiler">
-            <h3 class="baslik">Bonhams Magazine Winter 2005 john lennon art of sone cethedra</h3>
-            <p class="satici">Satıcı: <span class="red">Sahaf Standı</span></p>
-            <p class="yayinevi">Yayınevi: Bonhams, 2005</p>
-            <p class="kondisyon">
-              Kondisyon: <span class="stars">★★★★ Çok İyi</span> 
-            </p>
-          </div>
-          <div class="fiyat-kismi">
-            <span class="fiyat">25,00 TL</span>
-            <button class="sepete-ekle">Sepete Ekle</button>
-          </div>
+    <div class="filters">
+      <span style="color: #931818;" >Dergiler kategorisindeki dergiler (Son 48 saat)</span>
+      <div class="siralama">
+        <h4>Sıralama Şekli</h4>
+        <div class="seciniz">
+          Seçiniz
+          <button>Yeni Gelenler</button>
         </div>
       </div>
     </div>
+<!--
+    <div class="dergi-listesi">
+      <div class="dergi-box">
+        <img src="~/assets/images/dergiler/gelenek.jpg" alt="Gelenek Kitap Dizisi" class="dergi-img" />
+        <div class="bilgiler">
+          <h3 class="baslik">Gelenek Kitap Dizisi sayı 19 Temmuz 1988</h3>
+          <p class="satici">Satıcı: <span class="red"> Sahaf Standı</span></p>
+          <p class="yayinevi">Yayınevi: Gelenek Yayınları, 1988</p>
+          <p class="kondisyon">
+            Kondisyon: <span class="stars">★★★★  Çok İyi</span>
+          </p>
+        </div>
+        <div class="fiyat-kismi">
+          <span class="fiyat">62,00 TL</span>
+          <button class="sepete-ekle">Sepete Ekle</button>
+        </div>
+      </div>
   
+      <div class="dergi-box">
+        <img src="~/assets/images/dergiler/bonhams.jpg" alt="Bonhams Magazine Winter 2005" class="dergi-img" />
+        <div class="bilgiler">
+          <h3 class="baslik">Bonhams Magazine Winter 2005 john lennon art of sone cethedra</h3>
+          <p class="satici">Satıcı: <span class="red">Sahaf Standı</span></p>
+          <p class="yayinevi">Yayınevi: Bonhams, 2005</p>
+          <p class="kondisyon">
+            Kondisyon: <span class="stars">★★★★ Çok İyi</span> 
+          </p>
+        </div>
+        <div class="fiyat-kismi">
+          <span class="fiyat">25,00 TL</span>
+          <button class="sepete-ekle">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</template>
+
+<script>
+
+  export const dergi = [
+    {
+      image: '',
+      title: '',
+      satici: '',
+      yayinevi: '',
+      kondisyon: '',
+      fiyat: ''
+    },
+  ]
+
+
+  export default {
+    name: 'Dergiler_container',
+  };
+</script>
   
-  </template>
-  
-  <style>
+<style>
   
   .search-bar {
     display: flex;
@@ -157,10 +176,3 @@
   }
   
   </style>
-  
-  <script>
-    export default {
-      name: 'Dergiler_container',
-    };
-  </script>
-    

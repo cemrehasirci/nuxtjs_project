@@ -5,7 +5,9 @@
           style="text-decoration: none; color: #931818; font-size: 20px;"
           >Dergiler</router-link>
       </div>
-  
+      
+      <hr>
+
       <ul class="sub-menu">
           <li><a href="#">Bilgisayar</a></li>
           <li><a href="#">Bilim ve Teknik</a></li>
@@ -48,10 +50,17 @@
     padding: 20px;
     width: 250px;
   }
+
+  hr {
+    margin: 15px 0px;
+    border-bottom: 4px #645412;
+    width: 100%px;
+  }
   
   .sub-menu {
     list-style: none;
     padding-left: 7px;
+    margin-top: 15px;
   }
   
   .sub-menu > li {
