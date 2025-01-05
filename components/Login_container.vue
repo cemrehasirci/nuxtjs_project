@@ -59,10 +59,35 @@
   
 <script setup>
   import { ref } from "vue";
+  import { useNuxtApp } from "nuxt/app";
+  import { signInWithEmailAndPassword } from "firebase/auth";
   
   const email = ref("");
   const password = ref("");
   const rememberMe = ref(false);
+
+  const handleLogin = async () => {
+    
+    const { $auth } = useNuxtApp();
+    try {
+    const userCredential = await signInWithEmailAndPassword($auth, email.value, password.value);
+    const user = userCredential.user;
+    console.log("Giriş başarılı:", user);
+
+    if (rememberMe.value) {
+      // Kullanıcıyı hatırlamak için işlemler
+      console.log("Kullanıcıyı hatırla seçildi");
+    }
+
+    // Kullanıcı girişinden sonra yönlendirme
+    alert("Başarılı giriş! Ana sayfaya yönlendiriliyorsunuz.");
+    // Örneğin: this.$router.push("/");
+  } catch (error) {
+    console.error("Giriş hatası:", error);
+    alert("Giriş başarısız. Lütfen bilgilerinizi kontrol edin.");
+  }
+
+  };
   
   const handleLogin = () => {
     console.log("Email:", email.value);
