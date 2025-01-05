@@ -33,7 +33,6 @@
   import Side_menu from '~/components/Side_menu.vue';
   import Slider from '../components/Slider.vue';
   import Son_eklenenler from '../components/Son_eklenenler.vue';
-
 </script>
 
 <style>

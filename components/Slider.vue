@@ -126,7 +126,7 @@
 
 
     .top-buttons-right {
-        justify-content: flex-end;
+      justify-content: flex-end;
     }
   
     /* Butonlar */

@@ -56,8 +56,8 @@
           </div>
         </div>
       </div>
-  
-      <a href="#" style="color: #981515;" >👤 Bana Özel</a>
+      
+      <router-link to="/login" style="color: #981515;">👤 Bana Özel</router-link>
       <a href="#" style="color: #981515;" >🛒 Sepetim (0)</a>
     </div>
   </div>
