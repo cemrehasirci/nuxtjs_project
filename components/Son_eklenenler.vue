@@ -32,7 +32,7 @@
   
   
   const books = ref<Book[]>([
-    { id: 1, name: 'Avrasyada Şamanlar', author: 'MIHALY HOPPAL', price: '90,00 ₺', image: '/assets/images/books/AvrasyadaŞamanlar.jpg' },
+    { id: 1, name: 'Avrasyada Şamanlar', author: 'MIHALY HOPPAL', price: '90,00 ₺', image: '/AvrasyadaŞamanlar.jpg' },
     { id: 2, name: 'Bilişsel Davranış Terapisinde Bilinçli Uygulama', author: 'James F. Boswell', price: '459₺', image: '/assets/images/books/BilişselDavranışlarTerapisindeBilinçliUygulama.jpg' },
     { id: 3, name: "BİRİNCİ DÜNYA SAVAŞI'NDA İSTANBUL'A YAPILAN HAVA SALDIRILARI", author: 'EMİN KURT - MESUT GÜVENBAŞ', price: '64₺', image: '/assets/images/books/BirinciDünyaSavaşındaİstanbulaYapılanHavaSaldırıları.jpg' },
     { id: 4, name: 'DENİZLER ALTINDA YİRMİ BİN FERSAH', author: 'Jules Verne', price: '70₺', image: '/assets/images/books/DenizlerAltındaYirmiBinFersah.jpg' },

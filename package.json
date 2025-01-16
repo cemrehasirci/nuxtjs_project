@@ -9,6 +9,7 @@
   "dependencies": {
     "firebase": "^11.1.0",
     "nuxt": "^3.15.0",
-    "nuxt-project": "file:"
+    "nuxt-project": "file:",
+    "vue": "^3.5.13"
   }
 }

@@ -11,7 +11,7 @@ export const blogs = [
     title: '“Mimarlık Daima Siyasaldır.”',
     date: 'Kasım 2023',
     link: '/path-to-blog-11',
-    image: '/assets/images/blog/blog4.jpg',
+    image: 'blog4.jpg',
     description: 'Yüksek Mimar, Akademisyen, Profesör, Yazar… Bunlar Prof. Dr. Uğur Tanyeli için kullanılabilecek sıfatlar. Ancak hiçbiri Uğur Bey’in aydın/mütefekkir kimliğini ifadeye yetmiyor. Evet, Uğur Tanyeli bir mimar. Üniversiteyi bitirdikten sonra mimarlık tarihi ve teorisi çalışmaya başladığı için tarihçi de diyebiliriz kendisine. Ama mimarlık tarihi deyince aklınıza yapı tarihi, mimari ekoller vesaire gelmesin. Merkeze inşa edilmiş bir binayı ya da binayı inşa eden mimarı alıyor olsa da Uğur Bey’in maksadı, son tahlilde insanı anlamak. Mimari esere bakarken; eseri ortaya koyan toplumun inanç ve düşünce sistemini, yaşam biçimini, ihtiyaçlarını hatta siyasetini de tartışmaya dahil ediyor. Zira söz konusu edilen yapı neticede bir insan eylemi ve Uğur Tanyeli’ye göre “Bir toplumdaki bütün bilgiler homolojiktir. Aynı düşünsel ve toplumsal altyapıyı kullanırlar.” Dolayısıyla parçalayarak bakmak sizi doğru cevaba ulaştırmaz.',
   },
   {
