@@ -17,8 +17,14 @@
         <Son_eklenenler />
       </div>
 
-      <div class="son_yazilar">
-        <Son_yazilar />
+      <div class="index_container3">
+        <div class="son_blog">
+
+        </div>
+
+        <div class="Islem_rehberi">
+          <Islem_rehberi />
+        </div>
       </div>
 
     </div>
@@ -33,6 +39,7 @@
   import Side_menu from '~/components/Side_menu.vue';
   import Slider from '../components/Slider.vue';
   import Son_eklenenler from '../components/Son_eklenenler.vue';
+  import Islem_rehberi from '../components/Islem_rehberi.vue';
 </script>
 
 <style>
@@ -54,10 +61,26 @@
 
   .index_container2 {
     display: flex;
-    height: 900px;
   }
+
   .son_eklenenler {
-    height: 100%;
+    margin-right: 20px;
+  }
+
+  .index_container3 {
+    padding-top: 10px;
+  }
+
+  .son_blog {
+    border: 1px solid #eee4cd;
+    margin: 30px 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    height: 400px;
+  }
+
+  .son_eklenenler {
+    height: 400%;
   }
 
 </style>

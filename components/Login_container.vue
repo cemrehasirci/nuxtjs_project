@@ -41,7 +41,7 @@
       <div class="info-box">
         <div class="register-box">
           <p>Üye değil misiniz?</p>
-          <button class="register-button">Üye Olun</button>
+          <button @click="redirectToLogin" class="login-button">Üye Olun</button>
           <p>Üyelik Avantajları;</p>
           <ul>
             <li>Güvenli ticaret döngüsü</li>
@@ -58,22 +58,43 @@
 </template>
   
 <script setup lang="ts">
-import { ref } from "vue";
+
+import { useRouter } from 'vue-router';
+// Router'ı al
+const router = useRouter();
+// Yönlendirme fonksiyonu
+function redirectToLogin(): void {
+    router.push('/signup');
+}
+
+
+
+
+import { defineComponent, ref } from "vue";
 import { useNuxtApp } from "nuxt/app";
-import { signInWithEmailAndPassword, type UserCredential } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
-// Reaktif değişkenler ve tür tanımları
-const email = ref<string>(""); // Email için string tür
-const password = ref<string>(""); // Şifre için string tür
-const rememberMe = ref<boolean>(false); // Checkbox için boolean tür
 
-// Login işlemini yöneten fonksiyon
+
+export default {
+
+}
+
+
+//*************************************************************** */
+
+// Reaktif değişkenler
+const email = ref<string>(""); 
+const password = ref<string>(""); 
+const rememberMe = ref<boolean>(false); 
+
+// Giriş işlemi için fonksiyon
 const handleLogin = async (): Promise<void> => {
-const { $auth } = useNuxtApp(); // Nuxt app instance'ına erişim
+  const { $auth } = useNuxtApp();
 
   try {
-    // Firebase kullanıcı girişi
-    const userCredential: UserCredential = await signInWithEmailAndPassword(
+    // Firebase kimlik doğrulama
+    const userCredential = await signInWithEmailAndPassword(
       $auth,
       email.value,
       password.value
@@ -82,27 +103,27 @@ const { $auth } = useNuxtApp(); // Nuxt app instance'ına erişim
     const user = userCredential.user; // Kullanıcı bilgisi
     console.log("Giriş başarılı:", user);
 
+    // Kullanıcıyı hatırlama işlemi
+    /*
     if (rememberMe.value) {
-      // Kullanıcıyı hatırlama işlemleri
-      console.log("Kullanıcıyı hatırla seçildi");
+      localStorage.setItem("user", JSON.stringify(user));
+      console.log("Kullanıcı bilgisi localStorage'a kaydedildi.");
+    } else {
+      sessionStorage.setItem("user", JSON.stringify(user));
+      console.log("Kullanıcı bilgisi sessionStorage'a kaydedildi.");
     }
+    */
 
-    // Başarılı giriş sonrası yönlendirme
     alert("Başarılı giriş! Ana sayfaya yönlendiriliyorsunuz.");
-    // Örneğin: this.$router.push("/");
-  } catch (error: unknown) {
-    console.error("Giriş hatası:", error);
+    // Örneğin bir yönlendirme
+    window.location.href = "/index.vue";
+  } catch (error) {
+    console.error("Giriş başarısız:", error);
     alert("Giriş başarısız. Lütfen bilgilerinizi kontrol edin.");
   }
 };
-
-  // Debug işlemleri için fonksiyon
-const debugLoginInfo = (): void => {
-  console.log("Email:", email.value);
-  console.log("Password:", password.value);
-  console.log("Remember Me:", rememberMe.value);
-};
 </script>
+
 
   
 <style scoped>

@@ -18,13 +18,11 @@
         </div>
 
         <div class="carousel-container">
-            <button class="arrow left" @click="prevImage">&#x276E;</button>
-            <div class="carousel">
-                <div v-for="(image, index) in images" :key="index" class="carousel-item" :class="{ active: index === currentIndex }">
-                    <img :src="image" alt="Carousel Image" />
-                </div>
-            </div>
-            <button class="arrow right" @click="nextImage">&#x276F;</button>
+          <button class="arrow left" @click="prevImage">&#x276E;</button>
+          <div class="carousel" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+            <img v-for="(s_image, index) in s_images" :key="index" :src="s_image" alt="Carousel Image" />
+          </div>
+          <button class="arrow right" @click="nextImage">&#x276F;</button>
         </div>
     
         <div class="campaign-banner">
@@ -42,8 +40,8 @@
     
     data() {
         return {
-            images: [
-                '/slider_img/image2.jpg',
+            s_images: [
+                "/Slider/image1.jpg",
                 "/assets/images/slider/image2.jpg",
                 '/assets/images/slider/image3.jpg',
                 '/assets/images/slider/image4.jpg',
@@ -65,11 +63,11 @@
     },
     methods: {
       nextImage(): void {
-        this.currentIndex = (this.currentIndex + 1) % this.images.length;
+        this.currentIndex = (this.currentIndex + 1) % this.s_images.length;
       },
       prevImage(): void {
         this.currentIndex =
-          (this.currentIndex - 1 + this.images.length) % this.images.length;
+          (this.currentIndex - 1 + this.s_images.length) % this.s_images.length;
       },
       startAutoSlide(): void {
         this.autoSlideInterval = setInterval(() => {

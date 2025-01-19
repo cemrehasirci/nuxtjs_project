@@ -1,12 +1,12 @@
 <template>
-    <div class="login">
+    <div class="signup">
 
-        <div class="login_con1">
-            <Login_container />
+        <div class="signup_con1">
+            <Signup_container />
         </div>
 
         
-        <div class="login_con2">
+        <div class="signup_con2">
             <Islem_rehberi />
         </div>
         
@@ -19,22 +19,22 @@
 
 
 <script>
-    import Login_container from '../components/Login_container.vue';
+    import Signup_container from '../components/Signup_container.vue';
     import Islem_rehberi from '../components/Islem_rehberi.vue';
 </script>
 
 <style>
 
-    .login {
+    .signup {
         display: flex;
     }
 
-    .login_con1 {
+    .signup_con1 {
         flex: 3;
-        max-width: 75%;
+        width: 600px;
     }
 
-    .login_con2 {
+    .signup_con2 {
         padding: 15px 10px;
         width: 300px;
     }

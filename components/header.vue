@@ -56,8 +56,19 @@
           </div>
         </div>
       </div>
+
+      <div class="dropdown">
+        <a href="#" style="color: #981515;">👤 Bana Özel</a>
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <router-link to="/login" >Giriş Yap</router-link><br><br>
+            <router-link to="/signup" >Kayıt Ol</router-link>            
+          </div>
+          
+        </div>
+
+      </div>
       
-      <router-link to="/login" style="color: #981515;">👤 Bana Özel</router-link>
       <a href="#" style="color: #981515;" >🛒 Sepetim (0)</a>
     </div>
   </div>

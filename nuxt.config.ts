@@ -5,8 +5,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-01-02",
   plugins: ["~/plugins/firebase"],
   typescript: {
-    strict: true, 
     shim: false,
+    strict: true, 
+    includeWorkspace: true,
   },
   app: {
     head: {

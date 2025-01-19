@@ -60,9 +60,9 @@
   <style scoped>
   .son_eklenen_container {
     background-color: #faf7ec;
-    padding: 30px;
-    border-radius: 8px;
+    padding: 30px 20px;
     max-width: 100%;
+    height: 900px;
     justify-content: center;
   }
   
@@ -70,7 +70,7 @@
     color: #931818;
     align-items: center;
     gap: 5px;
-    
+    margin-bottom: 10px;
   }
 
   .title h1 {
