@@ -57,45 +57,53 @@
     </div>
 </template>
   
-<script setup>
-  import { ref } from "vue";
-  import { useNuxtApp } from "nuxt/app";
-  import { signInWithEmailAndPassword } from "firebase/auth";
-  
-  const email = ref("");
-  const password = ref("");
-  const rememberMe = ref(false);
+<script setup lang="ts">
+import { ref } from "vue";
+import { useNuxtApp } from "nuxt/app";
+import { signInWithEmailAndPassword, type UserCredential } from "firebase/auth";
 
-  const handleLogin = async () => {
-    
-    const { $auth } = useNuxtApp();
-    try {
-    const userCredential = await signInWithEmailAndPassword($auth, email.value, password.value);
-    const user = userCredential.user;
+// Reaktif değişkenler ve tür tanımları
+const email = ref<string>(""); // Email için string tür
+const password = ref<string>(""); // Şifre için string tür
+const rememberMe = ref<boolean>(false); // Checkbox için boolean tür
+
+// Login işlemini yöneten fonksiyon
+const handleLogin = async (): Promise<void> => {
+const { $auth } = useNuxtApp(); // Nuxt app instance'ına erişim
+
+  try {
+    // Firebase kullanıcı girişi
+    const userCredential: UserCredential = await signInWithEmailAndPassword(
+      $auth,
+      email.value,
+      password.value
+    );
+
+    const user = userCredential.user; // Kullanıcı bilgisi
     console.log("Giriş başarılı:", user);
 
     if (rememberMe.value) {
-      // Kullanıcıyı hatırlamak için işlemler
+      // Kullanıcıyı hatırlama işlemleri
       console.log("Kullanıcıyı hatırla seçildi");
     }
 
-    // Kullanıcı girişinden sonra yönlendirme
+    // Başarılı giriş sonrası yönlendirme
     alert("Başarılı giriş! Ana sayfaya yönlendiriliyorsunuz.");
     // Örneğin: this.$router.push("/");
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Giriş hatası:", error);
     alert("Giriş başarısız. Lütfen bilgilerinizi kontrol edin.");
   }
+};
 
-  };
-  
-  const handleLogin = () => {
-    console.log("Email:", email.value);
-    console.log("Password:", password.value);
-    console.log("Remember Me:", rememberMe.value);
-    // Burada login işlemini gerçekleştirin (Firebase veya başka bir yöntem)
-  };
+  // Debug işlemleri için fonksiyon
+const debugLoginInfo = (): void => {
+  console.log("Email:", email.value);
+  console.log("Password:", password.value);
+  console.log("Remember Me:", rememberMe.value);
+};
 </script>
+
   
 <style scoped>
 

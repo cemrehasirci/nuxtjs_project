@@ -5,9 +5,9 @@
         <div class="baslik"><h3>✏️ Blog'dan Son Yazılar</h3></div>
         <div class="yazi_box">
           <ul>
-            <li v-for="(blog, index) in latestBlogs" :key="index">
-            <a :href="blog.link"><h4>{{ blog.title }}</h4></a>
-            <small><i>{{ blog.date }}</i></small>
+            <li v-for="(Blog, index) in latestBlogs" :key="index">
+            <a :href="Blog.link"><h4>{{ Blog.title }}</h4></a>
+            <small><i>{{ Blog.date }}</i></small>
           </li>
           </ul>
         </div>
@@ -18,6 +18,20 @@
     </div>
     
 </template>
+
+<script setup>
+    import { ref, onMounted } from 'vue';
+    import { Blog } from '@/components/Blogs_container.vue';
+    import Islem_rehberi from '@/components/Islem_rehberi.vue';
+    
+    
+    const latestBlogs = ref<Blog[Blog]>([]);
+    
+    // Dinamik olarak blog verilerini al
+    onMounted(() => {
+      latestBlogs.value = Blog.slice(0, 4); // Son 4
+    });
+</script>
     
 <style>
 
@@ -53,17 +67,3 @@
   }
     
 </style>
-    
-<script setup>
-    import { ref, onMounted } from 'vue';
-    import { blogs } from '@/components/Blogs_container.vue';
-    import Islem_rehberi from '/components/Islem_rehberi.vue';
-    
-    const latestBlogs = ref([]);
-    
-    // Dinamik olarak blog verilerini al
-    onMounted(() => {
-      latestBlogs.value = blogs.slice(0, 4); // Son 4
-    });
-</script>
-      

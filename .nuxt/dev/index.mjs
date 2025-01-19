@@ -180,7 +180,7 @@ const _YCKCxYhg4F = (function(nitro) {
 
 const rootDir = "C:/Users/CEMRE/Desktop/nuxtjs_project";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"title":"Nadir Kitap"};
 
 const appRootTag = "div";
 

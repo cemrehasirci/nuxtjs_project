@@ -44,7 +44,7 @@
         return {
             images: [
                 '/slider_img/image2.jpg',
-                '/assets/images/slider/image2.jpg',
+                "/assets/images/slider/image2.jpg",
                 '/assets/images/slider/image3.jpg',
                 '/assets/images/slider/image4.jpg',
                 '/assets/images/slider/image5.jpg',
